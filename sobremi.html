@@ -48,43 +48,46 @@
   <div style="max-width: 1000px; margin: 0 auto; background: #ffffff; border-radius: 18px; box-shadow: 0 6px 24px rgba(42,122,226,0.10); padding: 42px 32px 36px;">
     
     <h2 style="text-align: center; color: #284773; font-size: 1.65rem;">Sobre mí</h2>
+    
     <p style="font-size: 1.1em; color: #222;">
       Soy Ricardo, tengo 20 años. Mi relación con el deporte y la salud no siempre fue positiva. En mi infancia no prestaba atención a la alimentación y su impacto en mi bienestar.
     </p>
     
-    <div style="display: flex; flex-wrap: wrap; gap:24px; margin:30px 0;">
-      <div style="flex:1 1 230px;text-align:center;">
-        <div class="image-hover-container" style="width: 400px; height: 500px; margin:0 auto;">
+    <div class="imagenes-texto-contenedor">
+      <div class="imagen-bloque">
+        <div class="image-hover-container">
           <img src="imagenes/Ricardogordito2.jpg" alt="Antes" class="first">
           <img src="imagenes/Ricardogordito1.jpg" alt="Después" class="second">
-        </div> <br>
-      </div>
+        </div>
+      </div> <br>
 
-          <p style="font-size: 1.1em; color: #222;">
-      Cuando llegué a la adolescencia, noté que la grasa que tenía en el cuerpo no me gustaba y me obsesioné con quedarme delgado, hasta el punto de llegar a marearme jugando al fútbol y ''estar en los huesos", comía muy poco en comparación a lo que quemaba, todo el día haciendo deporte, y muchos otros factores que hicieron que quedara tal y como se me ve en esta foto.
-    </p>
-      <div style="flex:1 1 230px;text-align:center;">
-        <div class="image-hover-container" style="width: 400px; height: 500px; margin:0 auto;">
+      <p style="font-size: 1.1em; color: #222;">
+        Cuando llegué a la adolescencia, noté que la grasa que tenía en el cuerpo no me gustaba y me obsesioné con quedarme delgado, hasta el punto de llegar a marearme jugando al fútbol y ''estar en los huesos", comía muy poco en comparación a lo que quemaba, todo el día haciendo deporte, y muchos otros factores que hicieron que quedara tal y como se me ve en esta foto.
+      </p>
+
+      <div class="imagen-bloque">
+        <div class="image-hover-container">
           <img src="imagenes/Ricardoflaco1.jpg" alt="Antes" class="first">
           <img src="imagenes/Ricardoflaco2.jpg" alt="Después" class="second">
         </div>
-      </div>
+      </div> <br>
 
+      <p style="font-size: 1.1em; color: #222;">
+        El verano de 2023 supuso mi punto de inflexión con la llegada al gimnasio de la mano de mi hermana. Empecé a alimentarme bien, a entrenar con objetivos claros y a descubrir otros deportes como el running y la natación. Todo ello me ha llevado a disfrutar de una vida más activa, saludable y equilibrada.
+      </p>
 
-    <p style="font-size: 1.1em; color: #222;">
-      El verano de 2023 supuso mi punto de inflexión con la llegada al gimnasio de la mano de mi hermana. Empecé a alimentarme bien, a entrenar con objetivos claros y a descubrir otros deportes como el running y la natación. Todo ello me ha llevado a disfrutar de una vida más activa, saludable y equilibrada.
-    </p>
-          <div style="flex:1 1 230px;text-align:center;">
-        <div class="image-hover-container" style="width: 400px; height: 500px; margin:0 auto;">
+      <div class="imagen-bloque">
+        <div class="image-hover-container">
           <img src="imagenes/Foto2.jpg" alt="Antes" class="first">
           <img src="imagenes/Ricardofuerte1.jpg" alt="Después" class="second">
         </div>
       </div>
-    </div>
+    </div> <br>
+
     <p style="font-size: 1.1em; color: #222;">
-      Hoy mi pasión es ayudar a otras personas a encontrar su propio camino hacia el bienestar, compartiendo mi experiencia y conocimientos tanto en nutrición, entrenamiento funcional y superación personal.
+    <br>  Hoy mi pasión es ayudar a otras personas a encontrar su propio camino hacia el bienestar, compartiendo mi experiencia y conocimientos tanto en nutrición, entrenamiento funcional y superación personal.
     </p>
-    
+
     <div style="display:flex;align-items:center;justify-content:center;margin-top:32px;">
       <a href="https://wa.me/34666168589" target="_blank" 
          style="background: #25D366; color: #fff; font-weight: bold; letter-spacing:1px; border-radius: 8px; padding: 14px 30px; text-decoration: none; font-size: 1.12em; box-shadow:0 2px 8px #25d36660;">
@@ -94,33 +97,73 @@
 
   </div>
 
-  <!-- Estilos para hover imágenes -->
   <style>
+    .imagenes-texto-contenedor {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin: 30px 0;
+      justify-content: center;
+    }
+
+    .imagen-bloque {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+
     .image-hover-container {
       position: relative;
-      display: inline-block;
+      width: 100%;
+      max-width: 400px;
+      aspect-ratio: 4/5;
+      margin: 0 auto;
       overflow: hidden;
       border-radius: 10px;
       box-shadow: 0 2px 8px #28477315;
     }
+
     .image-hover-container img {
       position: absolute;
       top: 0; left: 0;
-      width: 100%; height: 100%;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       transition: opacity 0.5s ease;
     }
+
     .image-hover-container img.second {
       opacity: 0; z-index: 2;
     }
+
     .image-hover-container:hover img.second {
       opacity: 1;
     }
+
     .image-hover-container:hover img.first {
       opacity: 0;
     }
+
+    @media (max-width: 768px) {
+      .imagenes-texto-contenedor {
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      .image-hover-container {
+        max-width: 90%;
+      }
+
+      h2 {
+        font-size: 1.4rem !important;
+      }
+
+      p {
+        font-size: 1em !important;
+      }
+    }
   </style>
 </section>
+
 
 
   <!-- Botón de WhatsApp -->

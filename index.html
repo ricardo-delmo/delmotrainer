@@ -28,10 +28,18 @@
     </ul>
   </header>
 
-  <!-- Banner principal -->
-  <div height="100px" style="background-color: black; padding: 20px;" align="center">
-    <img src="imagenes/banner.gif" alt="Imagen">
-  </div>
+<!-- Banner principal -->
+<div style="background-color: black; padding: 20px; text-align: center;">
+  <img src="imagenes/banner.gif" alt="Banner" style="max-width: 100%; height: auto;">
+</div>
+
+<style>
+  @media (max-width: 600px) {
+    div[style*="background-color: black"] {
+      padding: 12px;
+    }
+  }
+</style>
 
   <!-- Cajas de texto  -->
   <div class="contenedor-cajas">
