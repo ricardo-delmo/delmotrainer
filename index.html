@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Web responsive -->
+  <title>DelmoTrainer</title>
+  <link rel="stylesheet" href="estilos/estilos.css">
+  <link rel="icon" type="Image/png" href="imagenes/Logo.jpg">
+</head>
+
+<body>
+  <!-- Menú principal -->
+  <header>
+    <ul id="menuprincipal">
+      <li><a href="index.html">Inicio</a></li>
+      <li>
+        <a href="servicios.html">Servicios</a>
+        <ul class="submenu">
+          <li><a href="servicios.html">Rutina de gimnasio</a></li>
+          <li><a href="servicios.html">Rutina de pilometría</a></li>
+          <li><a href="servicios.html">Planificación Running</a></li>
+          <li><a href="servicios.html">Ofertas Conjuntas</a></li>
+        </ul>
+      </li>
+      <li><a href="sobremi.html">Sobre mí</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </header>
+
+  <!-- Banner principal -->
+  <div height="100px" style="background-color: black; padding: 20px;" align="center">
+    <img src="imagenes/banner.gif" alt="Imagen">
+  </div>
+
+  <!-- Cajas de texto  -->
+  <div class="contenedor-cajas">
+    <div class="caja">
+      <div class="icono">💪</div>
+      <div class="titulo">Rutina de gimnasio</div>
+      <div class="texto">
+        Rutina de entrenamiento personalizada para gimnasio, con un plan de entrenamiento adaptado a tus objetivos y
+        necesidades. Incluye ejercicios de fuerza, resistencia y flexibilidad.
+      </div>
+    </div>
+    <div class="caja">
+      <div class="icono">👣</div>
+      <div class="titulo">Rutina de pliometría</div>
+      <div class="texto">
+        Rutina de entrenamiento enfocada en ejercicios pliométricos para mejorar la potencia y explosividad. Ideal para
+        atletas que buscan mejorar su rendimiento en deportes de alta intensidad.
+      </div>
+    </div>
+    <div class="caja">
+      <div class="icono">💨</div>
+      <div class="titulo">Planificación Running</div>
+      <div class="texto">
+        Rutina de entrenamiento para runners, con un plan de entrenamiento adaptado a tus objetivos y nivel. Incluye
+        ejercicios de resistencia, velocidad y técnica de carrera.
+      </div>
+    </div>
+    <div class="caja">
+      <div class="icono">🫀</div>
+      <div class="titulo">Mejora tu salud</div>
+      <div class="texto">
+        Rutina de entrenamiento enfocada en mejorar tu salud general, con un plan de entrenamiento adaptado a tus
+        necesidades. Incluye ejercicios de fuerza, resistencia y flexibilidad para un bienestar integral.
+      </div>
+    </div>
+  </div> <br>
+
+<!-- Imágenes -->
+ <h2 style="text-align: center;">¡Empieza hoy tu cambio!</h2>
+<style>
+    .slider-container {
+      max-width: 600px;
+      margin: 40px auto;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.13);
+      border-radius: 15px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .slider {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+      width: 100%;
+    }
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0 0 15px 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+    }
+    .controls {
+      position: absolute;
+      top: 50%;
+      left: 0; right: 0;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    .control-btn {
+      background: rgba(0,0,0,0.35);
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      padding: 10px 18px;
+      cursor: pointer;
+      pointer-events: all;
+      border-radius: 50%;
+      transition: background 0.2s;
+      user-select: none;
+    }
+    .control-btn:hover {
+      background: rgba(0,0,0,0.7);
+    }
+    .dots {
+      position: absolute;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 7px;
+    }
+    .dot {
+      height: 12px;
+      width: 12px;
+      background: #ccc;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid #fff;
+      transition: background 0.2s;
+    }
+    .dot.active {
+      background: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider-container">
+    <div class="slider" id="slider">
+      <div class="slide"><img src="imagenes/Foto1.jpg" alt="Foto 1"></div>
+      <div class="slide"><img src="imagenes/Foto2.jpg" alt="Foto 2"></div>
+      <div class="slide"><img src="imagenes/Foto3.jpg" alt="Foto 3"></div>
+      <div class="slide"><img src="imagenes/Foto4.jpg" alt="Foto 4"></div>
+    </div>
+    <div class="controls">
+      <button class="control-btn" id="prevBtn">&#9664;</button>
+      <button class="control-btn" id="nextBtn">&#9654;</button>
+    </div>
+    <div class="dots" id="dots"></div>
+  </div>
+  <script>
+    const slider = document.getElementById('slider');
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dots = document.getElementById('dots');
+
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      if(index < 0) currentIndex = slides.length - 1;
+      else if(index >= slides.length) currentIndex = 0;
+      else currentIndex = index;
+      slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+      document.querySelectorAll('.dot').forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentIndex);
+      });
+    }
+
+    slides.forEach((_, idx) => {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      if(idx === currentIndex) dot.classList.add('active');
+      dot.addEventListener('click', () => showSlide(idx));
+      dots.appendChild(dot);
+    });
+
+    prevBtn.addEventListener('click', () => showSlide(currentIndex - 1));
+    nextBtn.addEventListener('click', () => showSlide(currentIndex + 1));
+
+    // Opcional: autoplay
+    // setInterval(() => showSlide(currentIndex + 1), 4000);
+
+    showSlide(currentIndex);
+  </script>
+
+
+
+  <!--Menú de preguntas-->
+  <h2 style="text-align: center;">Preguntas Frecuentes</h2>
+  <div class="faq-item">
+    <input type="checkbox" id="preg1" style="display:none;" />
+    <label class="faq-question" for="preg1">¿Mis rutinas serán personalizadas en función de mis objetivos?</label>
+    <div class="faq-answer">
+      Sí, todas las rutinas están diseñadas para adaptarse a tus objetivos específicos, ya sea ganar masa muscular ,
+      perder peso , rutina de pilometría , rutina de running .
+    </div>
+  </div>
+  <div class="faq-item">
+    <input type="checkbox" id="preg2" style="display:none;" />
+    <label class="faq-question" for="preg2">¿Habrá un seguimiento de mi progreso?</label>
+    <div class="faq-answer">
+      Sí , dispondrás de un seguimiento continuo de tu progreso, con ajustes en las rutinas según sea necesario para
+      garantizar que alcances tus objetivos de manera efectiva.
+    </div>
+  </div>
+  <div class="faq-item">
+    <input type="checkbox" id="preg3" style="display:none;" />
+    <label class="faq-question" for="preg3">¿Cómo puedo empezar?</label>
+    <div class="faq-answer">
+      Solo tienes que ponerte en contacto de la manera que prefieras : Instagram o correo electrónico y a partir de ahí
+      te guiaré en el proceso de creación de tu rutina personalizada.
+    </div>
+  </div>
+
+
+  <!-- Botón de WhatsApp -->
+  <div style="text-align:center;">
+    <a href="https://wa.me/34666168589" target="_blank" style="text-decoration:none;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp"
+        style="width:40px;vertical-align:middle;">
+      <span style="display:block;font-size:18px;color:#222;font-weight:bold;margin-top:8px;">¡Escríbenos por
+        Whatsapp!</span>
+      <span style="display:block;color:#668;margin-bottom:8px;">+34 666 16 85 89</span>
+      <span
+        style="background:#25D366;padding:10px 24px;border-radius:6px;color:#fff;font-weight:bold;display:inline-block;">Escribir
+        Ahora</span>
+    </a>
+  </div>
+
+
+
+  <!-- Footer -->
+  <footer align="center">
+    <p>&copy; 2025 Entrenador Personal - Ricardo Delgado Morales</p>
+    <h3>Contacto:</h3>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/delmotrainer/" target="_blank"><img src="imagenes/ig.png" alt="Instagram"
+          style="max-width: 50px;"></a> |
+      <a href="https://www.tiktok.com/@ricardodelgado.18?lang=es-419" target="_blank"><img src="imagenes/tiktok.png"
+          alt="TikTok" style="max-width: 50px;"></a> |
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=delmotrainer@gmail.con" target="_blank"><img
+          src="imagenes/gmail.png" alt="Correo" style="max-width: 50px;"></a>
+    </div>
+
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Web responsive -->
+  <title>DelmoTrainer</title>
+  <link rel="stylesheet" href="estilos/estilos.css">
+  <link rel="icon" type="Image/png" href="imagenes/Logo.jpg">
+</head>
+
+<body>
+  <header>
+    <!-- Menú principal -->
+    <ul id="menuprincipal">
+      <li><a href="index.html">Inicio</a></li>
+      <li>
+        <a href="servicios.html">Servicios</a>
+        <ul class="submenu">
+          <li><a href="servicios.html">Rutina de gimnasio</a></li>
+          <li><a href="servicios.html">Rutina de pilometría</a></li>
+          <li><a href="servicios.html">Planificación Running</a></li>
+          <li><a href="servicios.html">Ofertas Conjuntas</a></li>
+        </ul>
+      </li>
+      <li><a href="sobremi.html">Sobre mí</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </header>
+  <!-- Caja de información personal -->
+  <section id="sobre-mi">
+    <div
+      style="background: #c8cacc; border-radius: 10px; box-shadow: 0 4px 12px rgba(42,122,226,0.08); padding: 20px 30px; max-width: 450px; margin: 0 auto;">
+      <h2 style="color: #000000; margin-bottom: 16px;">🎓 Titulaciones y estudios</h2>
+
+      <li style="margin-bottom: 10px;">
+        <span style="font-size: 1.3em; margin-right: 8px;">🏋️‍♂️</span>
+        <strong>Técnico en acondicionamiento físico</strong>
+      </li>
+      <li>
+        <span style="font-size: 1.3em; margin-right: 8px;">🩺</span>
+        <strong>Estudiante de 1º de Fisioterapia en la UCO</strong>
+      </li>
+    </div>
+  </section>
+
+<section id="sobre-mi" style="background: #f8f9fb; padding: 40px 0;">
+  <div style="max-width: 1000px; margin: 0 auto; background: #ffffff; border-radius: 18px; box-shadow: 0 6px 24px rgba(42,122,226,0.10); padding: 42px 32px 36px;">
+    
+    <h2 style="text-align: center; color: #284773; font-size: 1.65rem;">Sobre mí</h2>
+    <p style="font-size: 1.1em; color: #222;">
+      Soy Ricardo, tengo 20 años. Mi relación con el deporte y la salud no siempre fue positiva. En mi infancia no prestaba atención a la alimentación y su impacto en mi bienestar.
+    </p>
+    
+    <div style="display: flex; flex-wrap: wrap; gap:24px; margin:30px 0;">
+      <div style="flex:1 1 230px;text-align:center;">
+        <div class="image-hover-container" style="width: 400px; height: 500px; margin:0 auto;">
+          <img src="imagenes/Ricardogordito2.jpg" alt="Antes" class="first">
+          <img src="imagenes/Ricardogordito1.jpg" alt="Después" class="second">
+        </div> <br>
+      </div>
+
+          <p style="font-size: 1.1em; color: #222;">
+      Cuando llegué a la adolescencia, noté que la grasa que tenía en el cuerpo no me gustaba y me obsesioné con quedarme delgado, hasta el punto de llegar a marearme jugando al fútbol y ''estar en los huesos", comía muy poco en comparación a lo que quemaba, todo el día haciendo deporte, y muchos otros factores que hicieron que quedara tal y como se me ve en esta foto.
+    </p>
+      <div style="flex:1 1 230px;text-align:center;">
+        <div class="image-hover-container" style="width: 400px; height: 500px; margin:0 auto;">
+          <img src="imagenes/Ricardoflaco1.jpg" alt="Antes" class="first">
+          <img src="imagenes/Ricardoflaco2.jpg" alt="Después" class="second">
+        </div>
+      </div>
+
+
+    <p style="font-size: 1.1em; color: #222;">
+      El verano de 2023 supuso mi punto de inflexión con la llegada al gimnasio de la mano de mi hermana. Empecé a alimentarme bien, a entrenar con objetivos claros y a descubrir otros deportes como el running y la natación. Todo ello me ha llevado a disfrutar de una vida más activa, saludable y equilibrada.
+    </p>
+          <div style="flex:1 1 230px;text-align:center;">
+        <div class="image-hover-container" style="width: 400px; height: 500px; margin:0 auto;">
+          <img src="imagenes/Foto2.jpg" alt="Antes" class="first">
+          <img src="imagenes/Ricardofuerte1.jpg" alt="Después" class="second">
+        </div>
+      </div>
+    </div>
+    <p style="font-size: 1.1em; color: #222;">
+      Hoy mi pasión es ayudar a otras personas a encontrar su propio camino hacia el bienestar, compartiendo mi experiencia y conocimientos tanto en nutrición, entrenamiento funcional y superación personal.
+    </p>
+    
+    <div style="display:flex;align-items:center;justify-content:center;margin-top:32px;">
+      <a href="https://wa.me/34666168589" target="_blank" 
+         style="background: #25D366; color: #fff; font-weight: bold; letter-spacing:1px; border-radius: 8px; padding: 14px 30px; text-decoration: none; font-size: 1.12em; box-shadow:0 2px 8px #25d36660;">
+         💬 ¡Contacta conmigo por WhatsApp!
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Estilos para hover imágenes -->
+  <style>
+    .image-hover-container {
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px #28477315;
+    }
+    .image-hover-container img {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: opacity 0.5s ease;
+    }
+    .image-hover-container img.second {
+      opacity: 0; z-index: 2;
+    }
+    .image-hover-container:hover img.second {
+      opacity: 1;
+    }
+    .image-hover-container:hover img.first {
+      opacity: 0;
+    }
+  </style>
+</section>
+
+
+  <!-- Botón de WhatsApp -->
+  <div style="text-align:center;">
+    <a href="https://wa.me/34666168589" target="_blank" style="text-decoration:none;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp"
+        style="width:40px;vertical-align:middle;">
+      <span style="display:block;font-size:18px;color:#222;font-weight:bold;margin-top:8px;">¡Escríbenos por
+        Whatsapp!</span>
+      <span style="display:block;color:#666;margin-bottom:8px;">+34 666 16 85 89</span>
+      <span
+        style="background:#25D366;padding:10px 24px;border-radius:6px;color:#fff;font-weight:bold;display:inline-block;">Escribir
+        Ahora</span>
+    </a>
+  </div>
+
+
+
+  <!-- Footer -->
+  <footer align="center">
+    <p>&copy; 2025 Entrenador Personal - Ricardo Delgado Morales</p>
+    <h3>Contacto:</h3>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/delmotrainer/" target="_blank"><img src="imagenes/ig.png" alt="Instagram"
+          style="max-width: 50px;"></a> |
+      <a href="https://www.tiktok.com/@ricardodelgado.18?lang=es-419" target="_blank"><img src="imagenes/tiktok.png"
+          alt="TikTok" style="max-width: 50px;"></a> |
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=delmotrainer@gmail.con" target="_blank"><img
+          src="imagenes/gmail.png" alt="Correo" style="max-width: 50px;"></a>
+    </div>
+
+  </footer>
+</body>
+
+</html>

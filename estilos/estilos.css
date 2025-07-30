@@ -1,0 +1,190 @@
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  /* Centra los elementos horizontalmente */
+  
+}
+
+/* Estilos básicos del menú */
+#menuprincipal {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #333;
+  display: flex;
+}
+
+#menuprincipal>li {
+  position: relative;
+  /* Para posicionar el submenu */
+}
+
+#menuprincipal>li>a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Submenú oculto por defecto */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  /* Justo debajo del menú padre */
+  left: 0;
+  background-color: #444;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+/* Estilos de los enlaces del submenu */
+.submenu li a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Mostrar submenu al pasar el mouse */
+#menuprincipal>li:hover .submenu {
+  display: block;
+}
+
+/* Efectos al pasar el mouse sobre enlaces */
+#menuprincipal>li>a:hover,
+.submenu li a:hover {
+  background-color: #555;
+}
+
+.videos-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+#video1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Izquierda */
+  flex: 1;
+}
+
+#video2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Centro */
+  flex: 1;
+}
+
+#video3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* Derecha */
+  flex: 1;
+}
+
+/* Estilos para la caja */
+.contenedor-cajas {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.caja {
+  background: #fff;
+  border: 2px solid #606160;
+  border-radius: 6px;
+  box-sizing: border-box;
+  width: 270px;
+  padding: 36px 24px 32px 24px;
+  text-align: center;
+  color: #444;
+  min-height: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icono {
+  font-size: 56px;
+  color: #606160;
+  margin-bottom: 18px;
+  margin-top: 6px;
+}
+
+.titulo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #606160;
+  margin-bottom: 14px;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.texto {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.5;
+}
+
+
+
+/* Estilos para menú de preguntas */
+
+/* Estilos generales */
+.faq-item {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+}
+
+/* Estilos del título de la pregunta */
+.faq-question {
+  display: block;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 4px 4px 0 0;
+  transition: background 0.2s;
+}
+
+/* Efecto hover en la pregunta */
+.faq-question:hover {
+  background: #b0b1b0;
+}
+
+/* Estilos de la respuesta */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s linear;
+  background: #fff;
+  color: #444;
+  padding: 0 12px;
+}
+
+/* Estilos del checkbox */
+input[type="checkbox"]:checked~.faq-answer {
+  max-height: 300px;
+  padding: 12px;
+}
